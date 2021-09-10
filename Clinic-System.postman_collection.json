@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "3534c1b3-11ea-41e2-939e-d4c44aafe0a8",
+		"name": "Clinic-System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Today Appointment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/admin/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"appointmentDate\":\"10-09-2021\",\r\n    \"patient\":[\r\n        {\r\n            \"name\":\"Adel\",\r\n            \"address\":\"address\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/admin/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/gateway/cancel",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gateway",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/admin/find/Adel",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"find",
+						"Adel"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
